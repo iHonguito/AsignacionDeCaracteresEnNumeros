@@ -57,11 +57,11 @@ public class Main {
         String numString = String.valueOf(num);
         int acumulador = 0, caracterOption = 0;
         for (int i = numString.length(); i > 0; i--) {
+            acumulador += 1;
             //Cada que posen 3 números (cuando va un punto) se sumará 1 indicando cuantos caracteres tiene
-            if (acumulador % 3 == 0){
+            if (acumulador % 3 == 0 && i != 1){
                 caracterOption += 1;
             }
-            acumulador += 1;
         }
         //Retronará la cantidad de caracteres que tiene el input
         return caracterOption;
